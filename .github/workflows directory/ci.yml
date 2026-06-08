@@ -1,0 +1,22 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: CI Pipeline Active
+        run: |
+          echo "✅ CI Pipeline is active"
+          echo "✅ Repository: ${{ github.repository }}"
+          echo "✅ Branch: ${{ github.ref_name }}"
+          echo "✅ Java Backend Project — Spring Boot"
+          echo "✅ Build pipeline ready for source code"
